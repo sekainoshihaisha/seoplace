@@ -48,3 +48,5 @@ end
 gem 'ckeditor'
 
 gem 'friendly_id'
+
+gem 'sitemap_generator'
