@@ -9,6 +9,9 @@
     <link rel="canonical" href="<%= @canonical_url %>">
   <% end %>
   <meta name="robots" content="noindex, nofollow">
+  <% if @og_properties.present? %>
+    <%= meta_og_tags @og_properties %>
+  <% end %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
