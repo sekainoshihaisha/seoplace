@@ -7,12 +7,14 @@ class PostsController < ApplicationController
     @posts = Post.all
     @meta_title = meta_title 'The place to find SEO tips'
     @meta_description = 'Weekly tips and tricks about SEO, Rails and penguins'
+    @canonical_url = canonical_url
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
     @meta_title = meta_title @post.title
+    @canonical_url = canonical_url "/posts/#{@post.slug}"
   end
 
   # GET /posts/new
