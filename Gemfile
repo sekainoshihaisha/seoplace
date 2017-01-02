@@ -46,3 +46,5 @@ group :development do
 end
 
 gem 'ckeditor'
+
+gem 'friendly_id'
